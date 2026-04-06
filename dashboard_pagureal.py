@@ -222,7 +222,7 @@ def transform_data(df: pd.DataFrame) -> pd.DataFrame:
 def to_excel_bytes(df: pd.DataFrame) -> bytes:
     buf = BytesIO()
     with pd.ExcelWriter(buf, engine='openpyxl') as writer:
-        df.to_excel(writer, index=False, sheet_name='PAGUREAL')
+        df.to_excel(writer, index=False, sheet_name='Sheet1')
     return buf.getvalue()
 
 
